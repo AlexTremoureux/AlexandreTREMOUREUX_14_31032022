@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+}
+.header {
+  display: flex;
+  
+  align-items: center;
+}
+.title {
+  width: 60%;
+  text-align: center;
+}
+.logo {
+  width: 20%;
+}
+.createEmployee {
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  background-color: gray;
+  border-radius: 5%;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 10px;
+}
+.fieldInput {
+  height: 20px;
+  width: 400px;
+}
+.red {
+  color: red;
+}
+.CTA {
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 20%;
+  margin: 5px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-float infinite 3s ease-in-out;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: rgb(112, 76, 182);
+}
+
+@keyframes App-logo-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
