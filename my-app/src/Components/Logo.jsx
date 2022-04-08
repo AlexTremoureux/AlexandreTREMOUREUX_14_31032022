@@ -2,7 +2,7 @@ import React from 'react';
 
 const Logo = () => {
     return (
-        <div className='logo' aria-label='logo HRnet' >
+        <div className='logo' aria-label='logo HRnet' role='link' >
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="150.000000pt" height="176.000000pt" viewBox="0 0 300.000000 276.000000"
  preserveAspectRatio="xMidYMid meet">
