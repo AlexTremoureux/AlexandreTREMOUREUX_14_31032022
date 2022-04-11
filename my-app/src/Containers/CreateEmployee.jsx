@@ -72,10 +72,9 @@ const CreateEmployee = () => {
           <input
             type="date"
             id="dateOfBirth"
-            name="trip-start"
-            value="2022-04-07"
+            name="dateOfBirth"
             min="1950-01-01"
-            max="2022-04-07"
+            max="2005-01-01"
             {...register("dateOfBirth")}
           ></input>
         </div>
@@ -85,10 +84,8 @@ const CreateEmployee = () => {
           <input
             type="date"
             id="startDate"
-            name="trip-start"
-            value="2022-04-07"
+            name="startDate"
             min="1950-01-01"
-            max="2022-04-07"
             {...register("startDate")}
           ></input>
         </div>

@@ -322,3 +322,42 @@ export const states = [
           "abbreviation": "WY"
       }
   ];
+  export const columnsTable = [
+    {
+      Header: "First Name",
+      accessor: "FirstName", // accessor is the "key" in the data
+    },
+    {
+      Header: "Last Name",
+      accessor: "LastName",
+    },
+    {
+      Header: "Date of birth",
+      accessor: "DateOfBirth",
+    },
+    {
+      Header: "Start date",
+      accessor: "StartDate",
+    },
+    {
+      Header: "Street",
+      accessor: "Street",
+    },
+    {
+      Header: "City",
+      accessor: "City",
+    },
+    
+    {
+      Header: "State",
+      accessor: "State",
+    },
+    {
+      Header: "Zip Code",
+      accessor: "ZipCode",
+    },
+    {
+      Header: "Department",
+      accessor: "Department",
+    },
+  ]
