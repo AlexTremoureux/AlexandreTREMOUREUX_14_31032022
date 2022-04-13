@@ -325,39 +325,39 @@ export const states = [
   export const columnsTable = [
     {
       Header: "First Name",
-      accessor: "FirstName", // accessor is the "key" in the data
+      accessor: "firstName", // accessor is the "key" in the data
     },
     {
       Header: "Last Name",
-      accessor: "LastName",
+      accessor: "lastName",
     },
     {
       Header: "Date of birth",
-      accessor: "DateOfBirth",
+      accessor: "dateOfBirth",
     },
     {
       Header: "Start date",
-      accessor: "StartDate",
+      accessor: "startDate",
     },
     {
       Header: "Street",
-      accessor: "Street",
+      accessor: "street",
     },
     {
       Header: "City",
-      accessor: "City",
+      accessor: "city",
     },
     
     {
       Header: "State",
-      accessor: "State",
+      accessor: "state",
     },
     {
       Header: "Zip Code",
-      accessor: "ZipCode",
+      accessor: "zipCode",
     },
     {
       Header: "Department",
-      accessor: "Department",
+      accessor: "department",
     },
   ]

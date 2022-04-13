@@ -3,22 +3,22 @@ import { useForm } from "react-hook-form";
 import React from "react";
 import { registerOptions, selectOptions, states } from "../utils/data";
 import { useDispatch } from "react-redux";
-import { addEmployee } from "../features/listOfEmployeesSlice";
+import { ADD_EMPLOYEE } from "../features/listOfEmployeesSlice";
 
 const CreateEmployee = () => {
   const dispatch = useDispatch();
   const onFormSubmit = (data) =>
     dispatch(
-      addEmployee({
-        FirstName: data.firstName,
-        LastName: data.lastName,
-        StartDate: data.startDate,
-        Department: data.department,
-        DateOfBirth: data.dateOfBirth,
-        Street: data.street,
-        City: data.city,
-        State: data.state,
-        ZipCode: data.zipCode,
+      ADD_EMPLOYEE({
+        firstName: data.firstName,
+        lastName: data.lastName,
+        startDate: data.startDate,
+        department: data.department,
+        dateOfBirth: data.dateOfBirth,
+        street: data.street,
+        city: data.city,
+        state: data.state,
+        zipCode: data.zipCode,
       })
     );
   const onErrors = (errors) => console.error(errors);
