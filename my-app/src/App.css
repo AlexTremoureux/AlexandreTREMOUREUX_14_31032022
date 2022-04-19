@@ -1,18 +1,62 @@
 body {
   text-align: center;
-  background-color: rgba(61, 61, 61, 0.81);
+  background-color: #BFB7B6;
+  margin: auto;
 }
+
 .header {
+  margin: 20px auto;
   display: flex;
-color: white;
+  color: white;
+  height: 100px;
+  max-width: 60%;
   align-items: center;
+  justify-content: space-between;
 }
+.logo,
+.navigation {
+  width: 20%;
+}
+
 .title {
   width: 60%;
+  color: #0c120c;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-align: center;
 }
-.logo {
-  width: 20%;
+.neumorphism {
+  margin: 20px;
+  height: 48px;
+  width: 98px;
+  color: #586912;
+  font-weight: bold;
+  border-radius: 15px;
+  background: #f1f2ee;
+  box-shadow: 7px 7px 20px #cdceca, -7px -7px 20px #ffffff;
+  border: none;
+  cursor: pointer;
+}
+.neumorphism:active {
+  background: #f1f2ee;
+  box-shadow: inset 7px 7px 20px #cdceca, inset -7px -7px 20px #ffffff;
+}
+.neumorphismLight {
+  margin: 20px;
+  height: 78px;
+  width: 88px;
+  color: #586912;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 15px;
+  background: #f1f2ee;
+  box-shadow: 7px 7px 20px #a29c9b, -7px -7px 20px #dcd2d1;
+  border: 1px solid #586912;
+  
+  cursor: pointer;
+}
+.neumorphismLight:active {
+  background: #f1f2ee;
+  box-shadow: inset 7px 7px 20px #cdceca, inset -7px -7px 20px #ffffff;
 }
 .createEmployee {
   display: flex;
@@ -20,9 +64,13 @@ color: white;
   flex-direction: column;
   align-items: center;
   margin: auto;
-  color: white;
-  background-color: rgb(46, 45, 45);
-  border-radius: 5%;
+  color: #0c120c;
+  background: #f1f2ee;
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.9px);
+-webkit-backdrop-filter: blur(4.9px);
+border: 1px solid rgba(241, 242, 238, 0.12);
 }
 .field {
   display: flex;
@@ -30,34 +78,49 @@ color: white;
   align-items: left;
   margin: 10px;
 }
-.fieldInput {
+.field > input,
+.field > select {
   height: 20px;
-  width: 400px;
   border-radius: 5px;
-  color: white;
-  background-color: rgb(90, 90, 90);
+  color: #0c120c;
+  background-color: #ecebf3;
 }
-.fieldInput:focus {
+.datePicker {
+  width: 200px;
+  margin: auto;
+  text-align: center;
+}
+
+.field > select {
+  width: 200px;
+  margin: auto;
+  text-align: center;
+}
+.fieldInput {
+  width: 400px;
+}
+.fieldInput:focus,
+.datePicker:focus,
+.field > select:focus {
   outline: none;
-  border: 1px solid green;
+  border: 1px solid #6e860e;
 }
 .red {
   color: red;
 }
-.CTA {
-  width: 100px;
-  height: 30px;
-  border: none;
-  border-radius: 20%;
-  margin: 5px;
+.arrowTable {
+  display: flex;
+  flex-direction: column;
+}
+.pagination > button {
+  width: 48px;
+  height: 48px;
 }
 .footer {
   display: flex;
   justify-content: space-around;
 }
-.footer > .logo {
-  width: 100px;
-}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-float infinite 3s ease-in-out;

@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import React from "react";
 import { registerOptions, selectOptions, states } from "../utils/data";
@@ -31,10 +30,6 @@ const CreateEmployee = () => {
 
   return (
     <>
-      <NavLink className="main-nav-item" to={"/employee-list"}>
-        <i className="fa fa-sign-out"></i>
-        View current employee
-      </NavLink>
       <form
         className="createEmployee"
         onSubmit={handleSubmit(onFormSubmit, onErrors)}
@@ -70,6 +65,7 @@ const CreateEmployee = () => {
         <div className="field">
           <label htmlFor="dateOfBirth">Date of birth:</label>
           <input
+            className="datePicker"
             type="date"
             id="dateOfBirth"
             name="dateOfBirth"
@@ -82,6 +78,7 @@ const CreateEmployee = () => {
         <div className="field">
           <label htmlFor="startDate">Start date:</label>
           <input
+            className="datePicker"
             type="date"
             id="startDate"
             name="startDate"
@@ -153,7 +150,7 @@ const CreateEmployee = () => {
           </select>
         </div>
 
-        <button className="CTA">Save</button>
+        <button className="neumorphismLight">Save</button>
       </form>
     </>
   );

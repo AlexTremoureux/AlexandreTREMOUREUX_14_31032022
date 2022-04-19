@@ -20,9 +20,10 @@ function GlobalFilter({
   }, 200);
 
   return (
-    <span>
+    <label htmlFor="globalSearch">
       Search:{" "}
       <input
+      id="globalSearch"
         value={value || ""}
         onChange={(e) => {
           setValue(e.target.value);
@@ -34,7 +35,7 @@ function GlobalFilter({
           border: "0",
         }}
       />
-    </span>
+    </label>
   );
 }
 
@@ -96,7 +97,7 @@ const Table = ({ columns, data }) => {
                     <th
                       {...column.getHeaderProps(column.getSortByToggleProps())}
                       style={{
-                          padding:"10px",
+                        padding:"10px",
                         borderRadius:"5px",
                         borderBottom: "solid 4px #93ad18",
                         background: "rgb(90, 90, 90)",
@@ -108,12 +109,12 @@ const Table = ({ columns, data }) => {
                         // Render the header
                         column.render("Header")
                       }
-                      <span>
+                      <span className="arrowTable">
                         {column.isSorted
                           ? column.isSortedDesc
                             ? " 🔽"
                             : " 🔼"
-                          : ""}
+                          : "🔽🔼"}
                       </span>
                     </th>
                   ))
@@ -182,9 +183,10 @@ const Table = ({ columns, data }) => {
             {pageIndex + 1} of {pageOptions.length}
           </strong>{" "}
         </span>
-        <span>
+        <label htmlFor="pages">
           | Go to page:{" "}
           <input
+          id="pages"
             type="number"
             defaultValue={pageIndex + 1}
             onChange={(e) => {
@@ -193,7 +195,7 @@ const Table = ({ columns, data }) => {
             }}
             style={{ width: "100px" }}
           />
-        </span>{" "}
+        </label>{" "}
         <select
           value={pageSize}
           onChange={(e) => {
