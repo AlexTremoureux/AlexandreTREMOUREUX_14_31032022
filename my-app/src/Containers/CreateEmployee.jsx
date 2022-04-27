@@ -34,9 +34,9 @@ const CreateEmployee = () => {
         className="createEmployee"
         onSubmit={handleSubmit(onFormSubmit, onErrors)}
       >
-        <h1>Create Employee</h1>
+        <h2 className="category">Create Employee</h2>
         <div className="field">
-          <label htmlFor="firstName">First Name</label>
+          <label htmlFor="firstName">First Name : </label>
           <input
             className="fieldInput is-invalid"
             type="text"
@@ -49,7 +49,7 @@ const CreateEmployee = () => {
           )}
         </div>
         <div className="field">
-          <label htmlFor="lastName">Last Name</label>
+          <label htmlFor="lastName">Last Name :</label>
           <input
             className="fieldInput"
             type="text"
@@ -63,7 +63,7 @@ const CreateEmployee = () => {
         </div>
 
         <div className="field">
-          <label htmlFor="dateOfBirth">Date of birth:</label>
+          <label htmlFor="dateOfBirth">Date of birth :</label>
           <input
             className="datePicker"
             type="date"
@@ -76,7 +76,7 @@ const CreateEmployee = () => {
         </div>
 
         <div className="field">
-          <label htmlFor="startDate">Start date:</label>
+          <label htmlFor="startDate">Start date :</label>
           <input
             className="datePicker"
             type="date"
@@ -91,7 +91,7 @@ const CreateEmployee = () => {
           <legend>Address</legend>
 
           <div className="field">
-            <label htmlFor="street">Street</label>
+            <label htmlFor="street">Street :</label>
             <input
               className="fieldInput"
               type="text"
@@ -104,7 +104,7 @@ const CreateEmployee = () => {
             )}
           </div>
           <div className="field">
-            <label htmlFor="city">City</label>
+            <label htmlFor="city">City :</label>
             <input
               className="fieldInput"
               type="text"
@@ -115,7 +115,7 @@ const CreateEmployee = () => {
             {errors?.city && <span className="red">{errors.city.message}</span>}
           </div>
           <div className="field">
-            <label>State</label>
+            <label>State :</label>
             <select {...register("state")}>
               {states.map((opt) => (
                 <option key={opt.abbreviation} value={opt.name}>
@@ -125,7 +125,7 @@ const CreateEmployee = () => {
             </select>
           </div>
           <div className="field">
-            <label htmlFor="zipCode">Zip Code</label>
+            <label htmlFor="zipCode">Zip Code :</label>
             <input
               className="fieldInput"
               name="zipCode"
@@ -140,7 +140,7 @@ const CreateEmployee = () => {
         </fieldset>
 
         <div className="field">
-          <label>Department</label>
+          <label>Department :</label>
           <select {...register("department")}>
             {selectOptions.map((opt) => (
               <option key={opt.value} value={opt.value}>
@@ -150,7 +150,7 @@ const CreateEmployee = () => {
           </select>
         </div>
 
-        <button className="neumorphismLight">Save</button>
+        <button className="neumorphismLight save">Save</button>
       </form>
     </>
   );

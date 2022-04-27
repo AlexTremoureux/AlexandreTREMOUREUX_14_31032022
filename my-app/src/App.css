@@ -1,82 +1,83 @@
-body {
-  text-align: center;
-  background-color: #BFB7B6;
-  margin: auto;
-}
-
-.header {
-  margin: 20px auto;
+#root {
+  background-color: #262724;
+  height: 100vh;
   display: flex;
-  color: white;
-  height: 100px;
-  max-width: 60%;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 90%;
+  width: 100%;
+  max-width: 90%;
+}
+.header {
+  max-width: 200px;
+  width: 15%;
+  display: flex;
   align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 40px;
+  background-color: #423e3e;
+  border-radius: 10px 0px 0px 10px;
+  box-shadow: 7px 7px 20px #383535;
 }
 .logo,
 .navigation {
-  width: 20%;
+  margin: 20px 0px;
+  font-size: 1rem;
 }
 
 .title {
-  width: 60%;
-  color: #0c120c;
+  color: #ffffff;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-align: center;
 }
-.neumorphism {
-  margin: 20px;
-  height: 48px;
-  width: 98px;
-  color: #586912;
-  font-weight: bold;
-  border-radius: 15px;
-  background: #f1f2ee;
-  box-shadow: 7px 7px 20px #cdceca, -7px -7px 20px #ffffff;
-  border: none;
-  cursor: pointer;
-}
-.neumorphism:active {
-  background: #f1f2ee;
-  box-shadow: inset 7px 7px 20px #cdceca, inset -7px -7px 20px #ffffff;
-}
+
 .neumorphismLight {
   margin: 20px;
   height: 78px;
   width: 88px;
-  color: #586912;
+  color: #7c8d36;
   font-weight: bold;
   font-size: 1rem;
   border-radius: 15px;
-  background: #f1f2ee;
-  box-shadow: 7px 7px 20px #a29c9b, -7px -7px 20px #dcd2d1;
+  background: linear-gradient(145deg, #232322, #2a2a29);
+  box-shadow: 7px 7px 20px #212120, -7px -7px 20px #2d2d2c;
   border: 1px solid #586912;
-  
+
   cursor: pointer;
 }
 .neumorphismLight:active {
-  background: #f1f2ee;
-  box-shadow: inset 7px 7px 20px #cdceca, inset -7px -7px 20px #ffffff;
+  background: #272726;
+  box-shadow: inset 7px 7px 20px #212120, inset -7px -7px 20px #2d2d2c;
 }
 .createEmployee {
   display: flex;
-  width: 500px;
+  width: 85%;
+  max-width: 1000px;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
+  justify-content: center;
+  color: #ffffff;
+  background: #2b2929;
+  border-radius: 0px 10px 10px 0px;
+  box-shadow: 7px 7px 20px #383535;
+  
+}
+.category {
   margin: auto;
-  color: #0c120c;
-  background: #f1f2ee;
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(4.9px);
--webkit-backdrop-filter: blur(4.9px);
-border: 1px solid rgba(241, 242, 238, 0.12);
+  font-size: 1.8rem;
+}
+fieldset {
+  max-width: 550px;
+  margin: 10px auto;
 }
 .field {
   display: flex;
   flex-direction: column;
   align-items: left;
-  margin: 10px;
+  margin: 10px auto;
 }
 .field > input,
 .field > select {
@@ -86,35 +87,60 @@ border: 1px solid rgba(241, 242, 238, 0.12);
   background-color: #ecebf3;
 }
 .datePicker {
-  width: 200px;
-  margin: auto;
+  width: 500px;
+
   text-align: center;
 }
-
 .field > select {
-  width: 200px;
-  margin: auto;
+  width: 500px;
+
   text-align: center;
 }
 .fieldInput {
-  width: 400px;
+  width: 500px;
 }
-.fieldInput:focus,
-.datePicker:focus,
-.field > select:focus {
-  outline: none;
-  border: 1px solid #6e860e;
+.save {
+  margin: auto;
 }
 .red {
   color: red;
 }
-.arrowTable {
+.employeeList {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #ffffff;
+  background: #2b2929;
+  border-radius: 0px 10px 10px 0px;
+  box-shadow: 7px 7px 20px #383535;
+  width: 100%;
+}
+.category2 {
+  width: 100%;
+  height: min-content;
+  text-align: center;
+  color: white;
+  font-size: 1.8rem;
+}
+.globalSearch {
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.arrowTable {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .pagination > button {
-  width: 48px;
-  height: 48px;
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(145deg, #232322, #2a2a29);
+  color: #7c8d36;
+  cursor: pointer;
 }
 .footer {
   display: flex;

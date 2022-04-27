@@ -10,10 +10,10 @@ const EmployeeList = () => {
   //const columns = React.useMemo(() => columnsTable, []);
   
   return (
-    <>
-      <h2>current employee</h2>
+    <div className="employeeList">
+      <h2 className="category2">Current employee</h2>
       <Table columns={columnsTable} data={dataStored} />
-    </>
+    </div>
   );
 };
 

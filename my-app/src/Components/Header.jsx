@@ -14,7 +14,7 @@ const Header = () => {
       <h1 className="title">HRnet</h1>
       {
         pathNameValue === '/'?
-        <Navigation path={"/employee-list"} text={"View current employee"} />
+        <Navigation path={"/employee-list"} text={"Current employee"} />
         :
         <Navigation path={"/"} text={"Create employee"} />
       }

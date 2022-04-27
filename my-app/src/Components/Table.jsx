@@ -20,7 +20,7 @@ function GlobalFilter({
   }, 200);
 
   return (
-    <label htmlFor="globalSearch">
+    <label className="globalSearch" htmlFor="globalSearch">
       Search:{" "}
       <input
       id="globalSearch"
@@ -83,7 +83,7 @@ const Table = ({ columns, data }) => {
         globalFilter={state.globalFilter}
         setGlobalFilter={setGlobalFilter}
       />
-      <table {...getTableProps()} style={{ border: "solid 1px #6e860e ", borderRadius:"6px", backgroundColor:"rgb(46, 45, 45)", margin:"auto" }}>
+      <table {...getTableProps()} style={{ border: "solid 1px #423e3e ", borderRadius:"6px", backgroundColor:"rgb(46, 45, 45)", margin:"20px auto" }}>
         <thead>
           {
             // Loop over the header rows
@@ -97,12 +97,13 @@ const Table = ({ columns, data }) => {
                     <th
                       {...column.getHeaderProps(column.getSortByToggleProps())}
                       style={{
-                        padding:"10px",
+                        padding:"10px 5px",
                         borderRadius:"5px",
-                        borderBottom: "solid 4px #93ad18",
+                        borderBottom: "solid 1px #93ad18",
                         background: "rgb(90, 90, 90)",
                         color: "white",
                         fontWeight: "bold",
+                        cursor:"pointer"
                       }}
                     >
                       {
@@ -112,9 +113,9 @@ const Table = ({ columns, data }) => {
                       <span className="arrowTable">
                         {column.isSorted
                           ? column.isSortedDesc
-                            ? " 🔽"
-                            : " 🔼"
-                          : "🔽🔼"}
+                            ? "⬇"
+                            : "⬆"
+                          : "⬇⬆"}
                       </span>
                     </th>
                   ))
@@ -145,7 +146,7 @@ const Table = ({ columns, data }) => {
                           {...cell.getCellProps()}
                           style={{
                             padding: "10px",
-                            border: "solid 1px #6e860e",
+                            border: "solid 1px #423e3e",
                             borderRadius: "3px",
                             background: "rgb(46, 45, 45)",
                           }}
