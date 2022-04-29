@@ -1,12 +1,23 @@
 import { useForm } from "react-hook-form";
-import React from "react";
+import React, { useState } from "react";
 import { registerOptions, selectOptions, states } from "../utils/data";
 import { useDispatch } from "react-redux";
 import { ADD_EMPLOYEE } from "../features/listOfEmployeesSlice";
+import { Modal } from "react-portal-modal-minimalist"
+
 
 const CreateEmployee = () => {
   const dispatch = useDispatch();
-  const onFormSubmit = (data) =>
+  const [isOpen, setIsOpen] = useState(false);
+  const customTheme = {
+    backgroundColorWrapper: "rgba(138, 138, 138, 0.6)",
+    backgroundColormodal: "#282c34",
+    colorText: "white",
+    modalWidth: "30%",
+    modalHeight: "20%",
+  };
+  
+  const onFormSubmit = (data) => {
     dispatch(
       ADD_EMPLOYEE({
         firstName: data.firstName,
@@ -20,16 +31,20 @@ const CreateEmployee = () => {
         zipCode: data.zipCode,
       })
     );
+    setIsOpen(true);
+    reset()
+  }
+  
   const onErrors = (errors) => console.error(errors);
-
   const {
     register,
     formState: { errors },
-    handleSubmit,
+    handleSubmit,reset
   } = useForm();
 
   return (
     <>
+    
       <form
         className="createEmployee"
         onSubmit={handleSubmit(onFormSubmit, onErrors)}
@@ -152,6 +167,15 @@ const CreateEmployee = () => {
 
         <button className="neumorphismLight save">Save</button>
       </form>
+      {isOpen && (
+        <Modal
+        handleClose={() => setIsOpen(false)}
+        isOpen={isOpen}
+        theme={customTheme}
+      >
+        Employee is created!
+      </Modal>
+      )}
     </>
   );
 };
