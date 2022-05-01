@@ -13,8 +13,10 @@ const CreateEmployee = () => {
     backgroundColorWrapper: "rgba(138, 138, 138, 0.6)",
     backgroundColormodal: "#282c34",
     colorText: "white",
-    modalWidth: "30%",
-    modalHeight: "20%",
+    modalWidth: "20%",
+    modalHeight: "15%",
+    fontSize: "1.8rem",
+    transitionCloseBtn:" transform 1000ms",
   };
   
   const onFormSubmit = (data) => {

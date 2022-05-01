@@ -1,14 +1,14 @@
 #root {
   background-color: #262724;
-  height: 100vh;
-  display: flex;
+  min-height: 100vh;
+  height: 100%;
+  display: block;
 }
 .wrapper {
   display: flex;
   justify-content: center;
   margin: auto;
-  height: 90%;
-  width: 100%;
+  padding: 10px;
   max-width: 90%;
 }
 .header {
@@ -30,12 +30,10 @@
 
 .title {
   color: #ffffff;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-align: center;
 }
 
 .neumorphismLight {
-  margin: 20px;
   height: 78px;
   width: 88px;
   color: #7c8d36;
@@ -45,7 +43,7 @@
   background: linear-gradient(145deg, #232322, #2a2a29);
   box-shadow: 7px 7px 20px #212120, -7px -7px 20px #2d2d2c;
   border: 1px solid #586912;
-
+  margin: 20px;
   cursor: pointer;
 }
 .neumorphismLight:active {
@@ -55,6 +53,7 @@
 .createEmployee {
   display: flex;
   width: 85%;
+  height: 900px;
   max-width: 1000px;
   flex-direction: column;
   align-items: left;
@@ -63,15 +62,15 @@
   background: #2b2929;
   border-radius: 0px 10px 10px 0px;
   box-shadow: 7px 7px 20px #383535;
-  
 }
 .category {
   margin: auto;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 fieldset {
   max-width: 550px;
   margin: 10px auto;
+  border: 1px groove rgb(182, 182, 182);
 }
 .field {
   display: flex;
@@ -79,22 +78,44 @@ fieldset {
   align-items: left;
   margin: 10px auto;
 }
+.field > label {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
 .field > input,
 .field > select {
   height: 20px;
-  border-radius: 5px;
-  color: #0c120c;
-  background-color: #ecebf3;
+  font-size: 1rem;
+  color: white;
+  background-color: #2b2929;
+  border: none;
+  border-bottom: white solid 1px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 75%;
+  box-sizing: border-box;
+  padding-left: 70%;
+  cursor: pointer;
+  color: white;
+  filter: invert(1);
+}
+input[type='date']{position:relative;}
+::-webkit-datetime-edit {
+  width: 25%;
 }
 .datePicker {
   width: 500px;
-
-  text-align: center;
+  color: #2b2929;
+  text-align: start;
+  justify-content: space-between;
+  appearance: auto;
 }
 .field > select {
   width: 500px;
 
-  text-align: center;
+  text-align: left;
 }
 .fieldInput {
   width: 500px;
@@ -139,41 +160,8 @@ fieldset {
   width: 38px;
   height: 38px;
   background: linear-gradient(145deg, #232322, #2a2a29);
+  border: 1px solid #232322;
   color: #7c8d36;
   cursor: pointer;
-}
-.footer {
-  display: flex;
-  justify-content: space-around;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  margin-bottom: 80px;
 }

@@ -16,7 +16,7 @@ export const registerOptions = {
   startDate: {
     required: "Start date is required",
     maxLength: {
-      value: 20,
+      value: 8,
       message: "Please enter your start date in good format",
     },
   },

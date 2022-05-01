@@ -29,7 +29,7 @@ function GlobalFilter({
           setValue(e.target.value);
           onChange(e.target.value);
         }}
-        placeholder={`${count} records...`}
+        placeholder={`${count} employee records...`}
         style={{
           fontSize: "1.1rem",
           border: "0",
@@ -97,7 +97,7 @@ const Table = ({ columns, data }) => {
                     <th
                       {...column.getHeaderProps(column.getSortByToggleProps())}
                       style={{
-                        padding:"10px 5px",
+                        padding:"5px",
                         borderRadius:"5px",
                         borderBottom: "solid 1px #93ad18",
                         background: "rgb(90, 90, 90)",
