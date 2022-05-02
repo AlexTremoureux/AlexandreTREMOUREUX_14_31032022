@@ -3,11 +3,12 @@ import React, { useState } from "react";
 import { registerOptions, selectOptions, states } from "../utils/data";
 import { useDispatch } from "react-redux";
 import { ADD_EMPLOYEE } from "../features/listOfEmployeesSlice";
-import { Modal } from "react-portal-modal-minimalist"
-
+import { Modal } from "react-portal-modal-minimalist";
 
 const CreateEmployee = () => {
   const dispatch = useDispatch();
+
+  // State for modal and his theme
   const [isOpen, setIsOpen] = useState(false);
   const customTheme = {
     backgroundColorWrapper: "rgba(138, 138, 138, 0.6)",
@@ -16,9 +17,9 @@ const CreateEmployee = () => {
     modalWidth: "20%",
     modalHeight: "15%",
     fontSize: "1.8rem",
-    transitionCloseBtn:" transform 1000ms",
+    transitionCloseBtn: " transform 1000ms",
   };
-  
+
   const onFormSubmit = (data) => {
     dispatch(
       ADD_EMPLOYEE({
@@ -34,19 +35,19 @@ const CreateEmployee = () => {
       })
     );
     setIsOpen(true);
-    reset()
-  }
-  
+    reset();
+  };
+
   const onErrors = (errors) => console.error(errors);
   const {
     register,
     formState: { errors },
-    handleSubmit,reset
+    handleSubmit,
+    reset,
   } = useForm();
 
   return (
     <>
-    
       <form
         className="createEmployee"
         onSubmit={handleSubmit(onFormSubmit, onErrors)}
@@ -86,10 +87,11 @@ const CreateEmployee = () => {
             type="date"
             id="dateOfBirth"
             name="dateOfBirth"
-            min="1950-01-01"
-            max="2005-01-01"
-            {...register("dateOfBirth")}
+            {...register("dateOfBirth", registerOptions.dateOfBirth)}
           ></input>
+          {errors?.dateOfBirth && (
+            <span className="red">{errors.dateOfBirth.message}</span>
+          )}
         </div>
 
         <div className="field">
@@ -99,9 +101,11 @@ const CreateEmployee = () => {
             type="date"
             id="startDate"
             name="startDate"
-            min="1950-01-01"
-            {...register("startDate")}
+            {...register("startDate", registerOptions.startDate)}
           ></input>
+          {errors?.startDate && (
+            <span className="red">{errors.startDate.message}</span>
+          )}
         </div>
 
         <fieldset className="address">
@@ -133,13 +137,17 @@ const CreateEmployee = () => {
           </div>
           <div className="field">
             <label>State :</label>
-            <select {...register("state")}>
+            <select {...register("state", registerOptions.state)}>
+              <option value = "">Please choose your State</option>
               {states.map((opt) => (
                 <option key={opt.abbreviation} value={opt.name}>
                   {opt.name}
                 </option>
               ))}
             </select>
+            {errors?.state && (
+              <span className="red">{errors.state.message}</span>
+            )}
           </div>
           <div className="field">
             <label htmlFor="zipCode">Zip Code :</label>
@@ -158,25 +166,30 @@ const CreateEmployee = () => {
 
         <div className="field">
           <label>Department :</label>
-          <select {...register("department")}>
+          
+          <select {...register("department", registerOptions.department)}>
+          <option value = "">Please choose your department</option>
             {selectOptions.map((opt) => (
               <option key={opt.value} value={opt.value}>
                 {opt.value}
               </option>
             ))}
           </select>
+          {errors?.department && (
+              <span className="red">{errors.department.message}</span>
+            )}
         </div>
 
         <button className="neumorphismLight save">Save</button>
       </form>
       {isOpen && (
         <Modal
-        handleClose={() => setIsOpen(false)}
-        isOpen={isOpen}
-        theme={customTheme}
-      >
-        Employee is created!
-      </Modal>
+          handleClose={() => setIsOpen(false)}
+          isOpen={isOpen}
+          theme={customTheme}
+        >
+          Employee is created!
+        </Modal>
       )}
     </>
   );

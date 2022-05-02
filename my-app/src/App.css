@@ -165,3 +165,19 @@ input[type='date']{position:relative;}
   cursor: pointer;
   margin-bottom: 80px;
 }
+.pageNotFound {
+  width: 800px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #7c8d36;
+  font-size: 5rem;
+  font-weight: bolder;
+  background-color: #212120;
+  border-radius: 0px 10px 10px 0px;
+}
+.oups {
+  padding: 40px 0px 0px 20px;
+  font-size: 1rem;
+}

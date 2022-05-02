@@ -1,0 +1,9 @@
+const date = new Date();
+const currentYear = date.getFullYear();
+const currentMonth = ("0" + (date.getMonth() + 1)).slice(-2)
+const currentDay = ("0" + date.getDate()).slice(-2)
+const majority = currentYear - 16;
+const senior = currentYear - 120;
+export const dateMin = `${senior}-${currentMonth}-${currentDay}`;
+export const dateMax = `${majority}-${currentMonth}-${currentDay}`;
+export const today = `${currentYear}-${currentMonth}-${currentDay}`;

@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { listOfEmployees } from '../utils/fakeData';
 
-const initialState = []
+const initialState = listOfEmployees
 
 export const listOfEmployeesSlice = createSlice({
   name: 'listOfEmployees',
