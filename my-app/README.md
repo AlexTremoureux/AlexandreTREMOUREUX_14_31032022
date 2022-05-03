@@ -1,44 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+[![forthebadge](https://forthebadge.com/images/badges/made-with-typescript.svg)](https://forthebadge.com) ![forthebadge](/built-with-react.svg) ![forthebadge](/use-redux.svg) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) 
 
-## Available Scripts
+# Project 14 - Faites passer une librairie jQuery vers React
 
-In the project directory, you can run:
+This repo contains all the source code for HRnet application.
 
-### `npm start`
+## Technologies
+- Javascript
+- CSS 
+- React
+- Redux
+- RTK Query
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Author
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Alexandre TREMOUREUX
 
-### `npm test`
+## 1. General Information
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The purpose of this project was to convert the code of the old application which was based on jquery. The redesign of the application was done in React with state management done by Redux and Redux persist.
+The Modal component has been fully converted into a React package. You can find it at this address: (https://github.com/AlexTremoureux/react-portal-modal-minimalist.git) or (https://www.npmjs.com/package/react-portal-modal-minimalist)
 
-### `npm run build`
+## 2. Project
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2.1 Install the project
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Fork the repository (with branch main)
+- Clone it on your computer.
+- The `npm install` command will allow you to install the dependencies:
+- The `npm start` command will allow you to run Front:
+    Runs the app in the development mode.\
+    Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    The page will reload when you make changes.\
+    You may also see any lint errors in the console.
+- The `npm run build` command will allow you Builds the app for production to the `build` folder.<br />
+    It correctly bundles React in production mode and optimizes the build for the best performance.
+    The build is minified and the filenames include the hashes.<br />
+    Your app is ready to be deployed!
+    See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

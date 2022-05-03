@@ -15,7 +15,7 @@ const CreateEmployee = () => {
     backgroundColormodal: "#282c34",
     colorText: "white",
     modalWidth: "20%",
-    modalHeight: "15%",
+    modalHeight: "10%",
     fontSize: "1.8rem",
     transitionCloseBtn: " transform 1000ms",
   };
@@ -138,7 +138,7 @@ const CreateEmployee = () => {
           <div className="field">
             <label>State :</label>
             <select {...register("state", registerOptions.state)}>
-              <option value = "">Please choose your State</option>
+              <option value="">Please choose your State</option>
               {states.map((opt) => (
                 <option key={opt.abbreviation} value={opt.name}>
                   {opt.name}
@@ -166,9 +166,9 @@ const CreateEmployee = () => {
 
         <div className="field">
           <label>Department :</label>
-          
+
           <select {...register("department", registerOptions.department)}>
-          <option value = "">Please choose your department</option>
+            <option value="">Please choose your department</option>
             {selectOptions.map((opt) => (
               <option key={opt.value} value={opt.value}>
                 {opt.value}
@@ -176,21 +176,20 @@ const CreateEmployee = () => {
             ))}
           </select>
           {errors?.department && (
-              <span className="red">{errors.department.message}</span>
-            )}
+            <span className="red">{errors.department.message}</span>
+          )}
         </div>
 
         <button className="neumorphismLight save">Save</button>
       </form>
-      {isOpen && (
-        <Modal
-          handleClose={() => setIsOpen(false)}
-          isOpen={isOpen}
-          theme={customTheme}
-        >
-          Employee is created!
-        </Modal>
-      )}
+
+      <Modal
+        handleClose={() => setIsOpen(false)}
+        isOpen={isOpen}
+        theme={customTheme}
+      >
+        Employee is created!
+      </Modal>
     </>
   );
 };

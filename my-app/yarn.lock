@@ -7207,10 +7207,10 @@ react-is@^17.0.1, react-is@^17.0.2:
   resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
-react-portal-modal-minimalist@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-portal-modal-minimalist/-/react-portal-modal-minimalist-1.0.2.tgz#13a2ab71b6c2240902e820a10500a751b7386411"
-  integrity sha512-m2azh3iJTH7cPaGeNVgZyxoCrF3mY9qtwMJ/qE4JMFGvA7uU+XJJtg65WVORWTwWQWcaM0w3OTBvzdXccq+rwQ==
+react-portal-modal-minimalist@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-portal-modal-minimalist/-/react-portal-modal-minimalist-1.0.3.tgz#1b04241f40ceae9515014347d182a2fe06be9e15"
+  integrity sha512-EaUXj1ws7xztpjHKoQOCduNIor1x3n1SxG5nYlwLfPnTtso/7idKWDPUECM5O5Ks9GkiZiCDhVHcAdNrVIGDTg==
 
 react-redux@^7.2.7:
   version "7.2.7"

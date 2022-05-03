@@ -34,21 +34,21 @@
 }
 
 .neumorphismLight {
-  height: 78px;
-  width: 88px;
+  height: 60px;
+  width: 110px;
   color: #7c8d36;
   font-weight: bold;
   font-size: 1rem;
   border-radius: 15px;
   background: linear-gradient(145deg, #232322, #2a2a29);
-  box-shadow: 7px 7px 20px #212120, -7px -7px 20px #2d2d2c;
+  box-shadow: 3px 3px 20px #212120, -3px -3px 20px #2d2d2c;
   border: 1px solid #586912;
   margin: 20px;
   cursor: pointer;
 }
 .neumorphismLight:active {
   background: #272726;
-  box-shadow: inset 7px 7px 20px #212120, inset -7px -7px 20px #2d2d2c;
+  box-shadow: inset 3px 3px 20px #212120, inset -3px -3px 20px #2d2d2c;
 }
 .createEmployee {
   display: flex;
@@ -61,7 +61,7 @@
   color: #ffffff;
   background: #2b2929;
   border-radius: 0px 10px 10px 0px;
-  box-shadow: 7px 7px 20px #383535;
+  box-shadow: 3px 3px 20px #383535;
 }
 .category {
   margin: auto;
@@ -134,7 +134,7 @@ input[type='date']{position:relative;}
   color: #ffffff;
   background: #2b2929;
   border-radius: 0px 10px 10px 0px;
-  box-shadow: 7px 7px 20px #383535;
+  box-shadow: 3px 3px 20px #383535;
   width: 100%;
 }
 .category2 {
