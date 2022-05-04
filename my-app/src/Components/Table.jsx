@@ -145,7 +145,7 @@ const Table = ({ columns, data }) => {
                         <td
                           {...cell.getCellProps()}
                           style={{
-                            padding: "10px",
+                            padding: "5px",
                             border: "solid 1px #423e3e",
                             borderRadius: "3px",
                             background: "rgb(46, 45, 45)",
