@@ -1,9 +1,9 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-
 import Logo from "./Logo";
 import Navigation from "./Navigation";
 
+// Header of App
 const Header = () => {
   const pathNameValue = useLocation().pathname
   return (

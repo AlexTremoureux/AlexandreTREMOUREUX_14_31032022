@@ -1,4 +1,4 @@
-[![forthebadge](https://forthebadge.com/images/badges/made-with-typescript.svg)](https://forthebadge.com) ![forthebadge](/built-with-react.svg) ![forthebadge](/use-redux.svg) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) 
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) 
 
 # Project 14 - Faites passer une librairie jQuery vers React
 
@@ -9,7 +9,10 @@ This repo contains all the source code for HRnet application.
 - CSS 
 - React
 - Redux
-- RTK Query
+
+## Libraries
+- React-Hook-Form
+- React-Table
 
 ## Author
 

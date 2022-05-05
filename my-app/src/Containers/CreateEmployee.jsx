@@ -20,6 +20,7 @@ const CreateEmployee = () => {
     transitionCloseBtn: " transform 1000ms",
   };
 
+  // Dispatch in global state
   const onFormSubmit = (data) => {
     dispatch(
       ADD_EMPLOYEE({
@@ -182,7 +183,6 @@ const CreateEmployee = () => {
 
         <button className="neumorphismLight save">Save</button>
       </form>
-
       <Modal
         handleClose={() => setIsOpen(false)}
         isOpen={isOpen}

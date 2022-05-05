@@ -7,12 +7,12 @@ import {
   useSortBy,
 } from "react-table";
 
-// Define a default UI for filtering
-function GlobalFilter({
+// Search Function
+const GlobalFilter = ( {
   preGlobalFilteredRows,
   globalFilter,
   setGlobalFilter,
-}) {
+}) => {
   const count = preGlobalFilteredRows.length;
   const [value, setValue] = React.useState(globalFilter);
   const onChange = useAsyncDebounce((value) => {
@@ -23,7 +23,7 @@ function GlobalFilter({
     <label className="globalSearch" htmlFor="globalSearch">
       Search:{" "}
       <input
-      id="globalSearch"
+        id="globalSearch"
         value={value || ""}
         onChange={(e) => {
           setValue(e.target.value);
@@ -39,15 +39,12 @@ function GlobalFilter({
   );
 }
 
+// Table of Employees
 const Table = ({ columns, data }) => {
   const {
     getTableProps,
     getTableBodyProps,
     headerGroups,
-    /*rows,*/
-    // Instead of using 'rows', we'll use page,
-    // which has only the rows for the active page
-    // The rest of these things are super handy, too ;)
     prepareRow,
     page,
     canPreviousPage,
@@ -73,8 +70,6 @@ const Table = ({ columns, data }) => {
     usePagination
   );
 
-  //const firstPageRows = rows.slice(0, 20)
-
   return (
     // apply the table props
     <>
@@ -83,7 +78,15 @@ const Table = ({ columns, data }) => {
         globalFilter={state.globalFilter}
         setGlobalFilter={setGlobalFilter}
       />
-      <table {...getTableProps()} style={{ border: "solid 1px #423e3e ", borderRadius:"6px", backgroundColor:"rgb(46, 45, 45)", margin:"20px auto" }}>
+      <table
+        {...getTableProps()}
+        style={{
+          border: "solid 1px #423e3e ",
+          borderRadius: "6px",
+          backgroundColor: "rgb(46, 45, 45)",
+          margin: "20px auto",
+        }}
+      >
         <thead>
           {
             // Loop over the header rows
@@ -97,13 +100,13 @@ const Table = ({ columns, data }) => {
                     <th
                       {...column.getHeaderProps(column.getSortByToggleProps())}
                       style={{
-                        padding:"5px",
-                        borderRadius:"5px",
+                        padding: "5px",
+                        borderRadius: "5px",
                         borderBottom: "solid 1px #93ad18",
                         background: "rgb(90, 90, 90)",
                         color: "white",
                         fontWeight: "bold",
-                        cursor:"pointer"
+                        cursor: "pointer",
                       }}
                     >
                       {
@@ -130,13 +133,11 @@ const Table = ({ columns, data }) => {
             // Loop over the table rows
             page.map((row, i) => {
               prepareRow(row);
-              //rows.map((row) => {
               // Prepare the row for display
               prepareRow(row);
               return (
                 // Apply the row props
-                <tr {...row.getRowProps()}
-                style={{color:"white"}}>
+                <tr {...row.getRowProps()} style={{ color: "white" }}>
                   {
                     // Loop over the rows cells
                     row.cells.map((cell) => {
@@ -187,7 +188,7 @@ const Table = ({ columns, data }) => {
         <label htmlFor="pages">
           | Go to page:{" "}
           <input
-          id="pages"
+            id="pages"
             type="number"
             defaultValue={pageIndex + 1}
             onChange={(e) => {
